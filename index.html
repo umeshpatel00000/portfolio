@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Umesh Patel | Portfolio</title>
+
+    <!-- Add these in your head section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .inactive{color:red}.contact-section{padding:100px 0;position:relative;overflow:hidden}.section-title{font-size:2.8rem;margin-bottom:60px;text-align:center;color:var(--secondary-color);position:relative;font-weight:700}.section-title span{color:var(--primary-color)}.section-title::after{content:"";position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:80px;height:4px;background:linear-gradient(90deg,var(--primary-color),var(--accent-color));border-radius:2px}.contact-container{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}.contact-card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:all .4s cubic-bezier(.25,.8,.25,1);width:480px;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.05)}.contact-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--primary-color),var(--accent-color))}.contact-card:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.12)}.contact-card h3{font-size:1.6rem;color:var(--primary-color);margin-bottom:20px;display:flex;align-items:center;gap:12px;font-weight:600}.contact-card p{color:#7f8c8d;margin-bottom:30px;font-size:1.05rem}.contact-details{margin:30px 0}.contact-item{display:flex;align-items:center;gap:15px;margin:20px 0;padding:12px 15px;border-radius:10px;transition:all .3s ease;background:rgba(52,152,219,.05)}.contact-item:hover{background:rgba(52,152,219,.1);transform:translateX(5px)}.icon-circle{width:48px;height:48px;background:rgba(52,152,219,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--primary-color);font-size:1.1rem;transition:all .3s ease}.contact-item:hover .icon-circle{background:rgba(52,152,219,.2);transform:rotate(5deg) scale(1.05)}.contact-link{color:var(--secondary-color);text-decoration:none;font-weight:500;font-size:1.05rem;transition:all .3s ease}.contact-link:hover{color:var(--primary-color)}.social-section{background:#fff;border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);width:480px;text-align:center;position:relative;border:1px solid rgba(0,0,0,.05)}.social-section::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--primary-color),var(--accent-color))}.social-section h3{font-size:1.6rem;color:var(--primary-color);margin-bottom:25px;font-weight:600}.social-links{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:30px}.social-icon{width:50px;height:50px;background:rgba(52,152,219,.05);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--primary-color);font-size:1.3rem;position:relative;transition:all .3s cubic-bezier(.25,.8,.25,1)}.social-icon:hover{background:var(--primary-color);color:#fff;transform:translateY(-5px) scale(1.1);box-shadow:0 8px 20px rgba(52,152,219,.3)}.social-icon:nth-child(4):hover{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);box-shadow:0 8px 20px rgba(220,39,67,.3)}.tooltip{position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);background:var(--secondary-color);color:#fff;padding:6px 12px;border-radius:6px;font-size:.8rem;font-weight:500;opacity:0;transition:all .3s ease;pointer-events:none;min-width:70px}.social-icon:hover .tooltip{opacity:1;bottom:-35px}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.floating{animation:float 4s ease-in-out infinite;display:inline-block}@media (max-width:768px){.contact-container{flex-direction:column;align-items:center}.contact-card,.social-section{width:100%;max-width:400px}.section-title{font-size:2.2rem}}.particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden}.particle{position:absolute;background:rgba(52,152,219,.1);border-radius:50%;animation:float 15s infinite linear}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.animate-scroll{opacity:0;animation:fadeInUp .8s forwards}@keyframes ripple{to{transform:scale(1);opacity:0}}.skills-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:20px;margin-top:30px}.skill-category{background:#fff;border-radius:8px;padding:20px;box-shadow:0 4px 6px rgba(0,0,0,.05);transition:transform .3s ease,box-shadow .3s ease}.skill-category:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(0,0,0,.1)}.skill-header{display:flex;align-items:center;margin-bottom:12px;border-bottom:1px solid #eee;padding-bottom:10px}.skill-header i{font-size:1.5rem;color:#3498db;margin-right:12px;width:30px;text-align:center}.skill-header h3{margin:0;font-size:1.1rem;color:#2c3e50}.skill-content{padding-left:42px;color:#555;line-height:1.5}@media (max-width:768px){.skills-list{grid-template-columns:1fr}.skill-content{padding-left:0;margin-top:8px}}.expandable-text{max-width:600px;margin:0 auto;font-family:'Segoe UI',Arial,sans-serif;line-height:1.6;color:#333}.hidden-content{max-height:0;overflow:hidden;transition:max-height .3s ease-out}.show-content{max-height:1000px;transition:max-height .5s ease-in}.toggle-button{background:0 0;border:none;color:#3498db;cursor:pointer;padding:5px 0;font-size:.9rem;display:inline-block;margin-top:5px}.toggle-button:hover{text-decoration:underline}.toggle-button:after{content:'→';margin-left:5px;display:inline-block;transition:transform .3s}.toggle-button.expanded:after{transform:rotate(90deg)}.academic-section{max-width:800px;margin:0 auto;padding:30px 20px}.section-title{text-align:center;margin-bottom:30px;color:#2c3e50;position:relative}.section-title::after{content:'';display:block;width:80px;height:3px;background:#3498db;margin:15px auto}.conferences,.publications{margin-bottom:40px}.conferences h3,.publications h3{color:#3498db;margin-bottom:20px;display:flex;align-items:center;gap:10px}.event-item,.publication-item{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:20px;border-left:4px solid #3498db}.event-item h4,.publication-item h4{margin:0 0 10px 0;color:#2c3e50}.event-meta,.publication-meta{display:flex;flex-wrap:wrap;gap:15px;font-size:.9rem;color:#555}.event-meta span,.publication-meta span{display:inline-flex;align-items:center;gap:5px}.ugc{color:#27ae60;font-weight:500}.status{color:#3498db}@media (max-width:600px){.event-meta,.publication-meta{flex-direction:column;gap:8px}}:root{--primary-color:#3498db;--secondary-color:#2c3e50;--light-color:#ecf0f1;--dark-color:#2c3e50;--accent-color:#e74c3c}*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{line-height:1.6;color:#333;background-color:#f9f9f9;overflow-x:hidden}a{text-decoration:none;color:var(--primary-color)}ul{list-style:none}.container{max-width:1100px;margin:auto;padding:0 20px;overflow:hidden}.section{padding:60px 0}.section-title{text-align:center;font-size:2.5rem;margin-bottom:50px;color:var(--primary-color);position:relative}.section-title::after{content:'';display:block;width:80px;height:4px;background:var(--primary-color);margin:15px auto}.btn{display:inline-block;padding:10px 30px;background:var(--primary-color);color:#fff;border:none;border-radius:5px;cursor:pointer;transition:all .3s}.btn:hover{background:#2980b9;transform:translateY(-2px)}#header{background:var(--secondary-color);color:#fff;padding:20px 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.1)}#header .container{display:flex;justify-content:space-between;align-items:center}#header h1{font-size:1.8rem}#header h1 span{color:var(--primary-color)}#nav ul{display:flex}#nav ul li{margin-left:30px}#nav ul li a{color:#fff;font-weight:500;transition:color .3s}#nav ul li a:hover{color:var(--primary-color)}.menu-toggle{display:none;cursor:pointer;font-size:1.5rem}#hero{height:100vh;background:linear-gradient(rgba(44,62,80,.8),rgba(44,62,80,.8)),url(https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;color:#fff;display:flex;align-items:center;text-align:center;padding-top:80px}#hero .hero-content{max-width:800px;margin:0 auto;padding:0 20px}#hero h1{font-size:3.5rem;margin-bottom:20px;line-height:1.2}#hero h2{font-size:2rem;margin-bottom:30px;font-weight:300}#hero p{font-size:1.2rem;margin-bottom:30px}#about .about-content{display:grid;grid-template-columns:1fr 2fr;gap:50px;align-items:center}#about .about-img{text-align:center}#about .about-img img{width:100%;max-width:300px;border-radius:50%;border:5px solid var(--light-color);box-shadow:0 5px 15px rgba(0,0,0,.1)}#about .about-text h3{font-size:1.8rem;margin-bottom:20px;color:var(--secondary-color)}#about .about-text p{margin-bottom:15px}.about-btns{margin:20px 20px}.about-btns a{margin:10px 10px}#skills{background:var(--light-color)}.skills-container{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.skill-card{background:#fff;padding:30px;border-radius:5px;box-shadow:0 5px 15px rgba(0,0,0,.1);text-align:center;transition:transform .3s}.skill-card:hover{transform:translateY(-10px)}.skill-card i{font-size:3rem;color:var(--primary-color);margin-bottom:20px}.skill-card h3{margin-bottom:15px;color:var(--secondary-color)}#education{background:#fff}.timeline{position:relative;max-width:800px;margin:0 auto}.timeline::after{content:'';position:absolute;width:4px;background:var(--primary-color);top:0;bottom:0;left:50%;margin-left:-2px}.timeline-item{padding:10px 40px;position:relative;width:50%;box-sizing:border-box}.timeline-item::after{content:'';position:absolute;width:20px;height:20px;background:#fff;border:4px solid var(--primary-color);border-radius:50%;top:15px;z-index:1}.left{left:0}.right{left:50%}.left::after{right:-12px}.right::after{left:-12px}.timeline-content{padding:20px;background:var(--light-color);border-radius:5px;box-shadow:0 5px 15px rgba(0,0,0,.1)}.timeline-content h3{margin-bottom:10px;color:var(--secondary-color)}.timeline-content p{margin-bottom:5px}.timeline-date{font-weight:700;color:var(--primary-color)}#experience{background:var(--light-color)}.experience-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.experience-card{background:#fff;padding:30px;border-radius:5px;box-shadow:0 5px 15px rgba(0,0,0,.1)}.experience-card h3{margin-bottom:15px;color:var(--secondary-color)}.experience-card .job-title{font-weight:700;color:var(--primary-color);margin-bottom:10px}.experience-card .job-date{font-style:italic;margin-bottom:15px;color:#666}.experience-card ul{margin-left:20px}.experience-card ul li{margin-bottom:5px;list-style-type:disc}#achievements{background:#fff}.achievements-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}.achievement-card{background:var(--light-color);padding:20px;border-radius:5px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1)}.achievement-card i{font-size:2.5rem;color:var(--primary-color);margin-bottom:20px}.achievement-card h3{margin-bottom:15px;color:var(--secondary-color)}#projects{background:var(--light-color)}.projects-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.project-card{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s}.project-card:hover{transform:translateY(-10px)}.project-img{height:200px;overflow:hidden}.project-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.project-card:hover .project-img img{transform:scale(1.1)}.project-content{padding:20px}.project-content h3{margin-bottom:15px;color:var(--secondary-color)}.project-content p{margin-bottom:15px}.project-tech{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:15px}.project-tech span{background:var(--light-color);padding:5px 10px;border-radius:3px;font-size:.8rem}.project-links a{margin-right:15px;font-weight:500}#contact{background:#fff}.contact-container{display:grid;grid-template-columns:repeat(2,1fr);gap:50px}.contact-info h3{margin-bottom:20px;color:var(--secondary-color)}.contact-info p{margin-bottom:15px}.contact-info .contact-item{display:flex;align-items:center;margin-bottom:20px}.contact-info .contact-item i{font-size:1.5rem;color:var(--primary-color);margin-right:15px}.contact-form .form-group{margin-bottom:20px}.contact-form label{display:block;margin-bottom:5px;font-weight:500}.contact-form input,.contact-form textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:5px;font-size:1rem}.contact-form textarea{height:150px;resize:vertical}#footer{background:var(--secondary-color);color:#fff;text-align:center;padding:30px 0}#footer p{margin-bottom:15px}.social-links{display:flex;justify-content:center;gap:20px;margin-bottom:20px}.social-links a{font-size:1.5rem;transition:color .3s}.social-links a:hover{color:var(--primary-color)}@media (max-width:992px){.skills-container{grid-template-columns:repeat(2,1fr)}.contact-container{grid-template-columns:1fr;gap:30px}.contact-info{order:1}.contact-form{order:2}}@media (max-width:768px){#header .container{flex-direction:row;justify-content:space-between}.menu-toggle{display:block;color:#fff;z-index:1001}#nav{position:fixed;top:0;right:-100%;width:80%;max-width:300px;height:100vh;background:var(--secondary-color);padding:80px 30px 30px;transition:right .3s ease;z-index:1000}#nav.active{right:0}#nav ul{flex-direction:column}#nav ul li{margin:15px 0}#hero h1{font-size:2.5rem}#hero h2{font-size:1.5rem}#about .about-content{grid-template-columns:1fr;text-align:center;gap:0;zoom:75%}.about-btns{justify-content:center}.timeline::after{left:31px}.timeline-item{width:100%;padding-left:70px;padding-right:25px}.timeline-item::after{left:21px}.left::after,.right::after{left:21px}.right{left:0}}@media (max-width:576px){.section{padding:40px 0}.section-title{font-size:2rem;margin-bottom:30px}.skills-container{grid-template-columns:1fr}.about-btns{flex-direction:column;gap:10px}.btn{width:100%;text-align:center}.project-links a{display:block;margin-bottom:10px}}@media (max-height:600px){#hero{height:auto;padding:100px 0 60px}}
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<!-- Google Analytics tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0KC0BQ871"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R0KC0BQ871');
+</script>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <h1><span>U</span> P</h1>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#hero">About</a></li>
+                    <!--<li><a href="#about">About</a></li>-->
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section id="hero" class="section">
+        <div class="container" id="about">
+
+            <div class="about-content" >
+                <div class="about-img">
+                    <img src="Photo.jpg" alt="Umesh Patel">
+                </div>
+                <div class="about-text">
+
+                    <h2 class="section-title">About Me</h2>
+                    <h1>Hi, I'm <span>Umesh Patel</span></h1>
+                    <h2>Java Developer | Software Engineer</h2>
+
+                    <p> Java Microservice Developer with 4.5+ years of
+                        hands-on experience in designing, developing, and
+                        maintaining robust, scalable java applications.</p>
+                    <div class="about-btns">
+                        <a href="UmeshPatel2025New.pdf" download="UmeshPatelCV.pdf" class="btn">Download CV</a>
+                        <a href="#contact" class="btn">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Programming Skills</h2>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fab fa-java"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-content">Java 8/17 (OCAJP)</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Java Concepts</h3>
+                    </div>
+                    <div class="skill-content">Core Java, collections, Stream API, Lambda, Multi-Threading, Servlet and JSP</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Java Frameworks</h3>
+                    </div>
+                    <div class="skill-content">Spring Boot, Spring MVC, Spring Security, Spring AOP, Hibernate</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database Management and Tools</h3>
+                    </div>
+                    <div class="skill-content">MySQL (MySQL Workbench), PLSQL (PGAdmin)</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-plug"></i>
+                        <h3>Database Access</h3>
+                    </div>
+                    <div class="skill-content">JdbcTemplate</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-vial"></i>
+                        <h3>Testing and Quality Assurance</h3>
+                    </div>
+                    <div class="skill-content">JUnit</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Integrated Development Environments (IDEs)</h3>
+                    </div>
+                    <div class="skill-content">Eclipse, IntelliJ IDEA, Spring Tool Suite (STS)</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Version Control</h3>
+                    </div>
+                    <div class="skill-content">GIT</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Build and Dependency Management</h3>
+                    </div>
+                    <div class="skill-content">Maven</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>CI/CD</h3>
+                    </div>
+                    <div class="skill-content">Jenkins</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Application Server</h3>
+                    </div>
+                    <div class="skill-content">JBoss, Apache Tomcat</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fab fa-html5"></i>
+                        <h3>Front-End Technologies</h3>
+                    </div>
+                    <div class="skill-content">HTML5, CSS3, Bootstrap and JQuery</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fab fa-docker"></i>
+                        <h3>Containerization & Orchestration</h3>
+                    </div>
+                    <div class="skill-content">Docker and Kubernetes</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Messaging Systems</h3>
+                    </div>
+                    <div class="skill-content">Kafka</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Caching Systems</h3>
+                    </div>
+                    <div class="skill-content">Redis</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Platforms</h3>
+                    </div>
+                    <div class="skill-content">AWS and GCP</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoring & Observability</h3>
+                    </div>
+                    <div class="skill-content">Grafana and Dynatrace</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fab fa-jira"></i>
+                        <h3>Project Management Tools</h3>
+                    </div>
+                    <div class="skill-content">Jira</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Document & Collaboration Tools</h3>
+                    </div>
+                    <div class="skill-content">Confluence (by Atlassian)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3> B.E-Computer Engineering</h3>
+                        <p class="timeline-date">2016 - 2020</p>
+                        <p>Atharva College Of Engineering</p>
+                        <p> CGPA: 8.96/10</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Maharashtra State Board(HSC)</h3>
+                        <p class="timeline-date">2014 - 2016</p>
+                        <p>Vidya Vikas Universal College</p>
+                        <p> 82.92%</p>
+                        <p>Field of Study-Science (Major)</br>
+                            Elective Subjec- Computer Science</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Maharashtra State Board(SSC)</h3>
+                        <p class="timeline-date">2014</p>
+                        <p>Divine Provident High School</p>
+                        <p> 85%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <h3> International Business Machines(IBM)</h3>
+                    <p class="job-title">Application Developer</p>
+                    Mumbai
+                    <p class="job-date"> July 2024- Present</p>
+                    <strong>Project:</strong></br>
+                    Fintech platform offering a range of financial services. It provides a one-stop
+                    solution for services such as Insurance, Loans, Investments, and Payments.
+                    Additionally, users can track expenses, check credit scores, and plan taxes, all
+                    within a user-friendly interface designed to simplify financial management.</br>
+
+                    <strong>Roles and Responsibilities:</strong>
+                    <ul>
+                        <li>Resolved production issues across insurance, loans, and investment services.</li>
+                        <li>Fixed critical microservice bugs, including transaction failures and data
+                        inconsistencies.</li>
+                        <li>Integrating third-party REST APIs.</li>
+                        <li>Worked with teams to troubleshoot and solve problems quickly.</li>
+                        <li>Optimized monitoring and alerting to reduce false positives and improve
+                        signal quality.</li>
+                        <li> Maintained high system availability through proactive troubleshooting and
+                        issue mitigation.</li>
+                        <li>Prevented financial losses through real-time monitoring and fast incident
+                        response.</li>
+                        <li>Performed Root Cause Analysis (RCA) to eliminate recurring incidents.</li>
+                        <li>Authored clear documentation to streamline RCA and incident response
+                        workflows.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3> Tata Consultancy Services(TCS)</h3>
+                    <p class="job-title">Java Developer</p>
+                    Mumbai
+                    <p class="job-date">Sept 2020- June 2024</p>
+                    <strong>Project:</strong></br>
+                    A budgeting tool designed to help organizations track income, expenses, and
+                    savings while providing insights into spending habits and financial goals.</br>
+
+                    <strong>Roles and Responsibilities:</strong>
+                    <ul>
+                        <li>Engineered Spring Boot RESTful APIs, improving data retrieval efficiency.</li>
+                        <li>Managed and optimized Spring Boot microservices for scalability and per
+                            formance.</li>
+                        <li>Implemented strong authentication and authorization with Spring Security.</li>
+                        <li>Leveraged Spring Data JPA to speed up data retrieval and reduce database
+                            related errors.</li>
+                        <li>Utilized PL/SQL to enhance query execution efficiency.</li>
+                        <li>Orchestrated deployment and system monitoring, reducing downtime.</li>
+                        <li>Conducted impactful code reviews and mentored junior developers.</li>
+                        <li>Skilled in debugging to identify and resolve issues, ensuring smooth func
+                            tionality</li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                   <!-- <div class="project-img">
+                        <img src="https://via.placeholder.com/600x400" alt="E-commerce Platform">
+                    </div>-->
+                    <div class="project-content">
+                        <h3>SpringBootBatchScheduling</h3>
+
+                        <p>Read Data from DB and write it into csv using Springboot Batch and send email using cron expression</p>
+                        <div class="project-tech">
+                            <span>SpringBoot</span>
+                            <span>Java 17</span>
+                            <span>Spring Data JPA</span>
+                            <span>Mysql</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/umeshpatel00000/SpringBootBatchScheduling"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <!--<div class="project-img">
+                       <img src="https://via.placeholder.com/600x400" alt="TAR menu card">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6516556184789585921?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>-->
+
+                    <div class="project-content">
+                        <h3>AR menu card</h3>
+                        <!--Jan 2019 - Feb 2019-->
+                        <p>
+                            The idea is to improve the ordering experience of the user using Augmented Reality.
+                            This app scans a specific target image and shows 3D models and 3D text of the items.
+                            User can select the item and order that item using this app.
+                        </p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>Vuforia</span>
+                            <span>PHP</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>MySQL</span>
+                        </div>
+                        <!--https://www.linkedin.com/posts/rahul-gupta-35220814b_ar-unity-augmentedreality-activity-6516556248706576384-fM--?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB8Nr6oByzdN5kYDuj6O7qAz7lzuYQWKLs0-->
+
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6516556184789585921?compact=1" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                                <i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="" class="inactive"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <!--<div class="project-img">
+                        <img src="https://via.placeholder.com/600x400" alt="Health Tracker">
+                    </div>-->
+                    <div class="project-content">
+                        <h3>Indoor navigation using augmented reality</br>(Final Year Project)</h3>
+                        <!--Nov 2019 - Jan 2020-->
+                        <div class="expandable-text">
+                            <p id="intro-text">Whenever People visit places like hospitals, museums, and colleges, they find it difficult to navigate
+                                to a particular location.</p>
+
+                            <!-- Your additional long content here -->
+                            <div id="more-text" class="hidden-content">
+                                <p>Using GPS for indoor navigation is impossible because GPS-enabled
+                                    smartphones are typically accurate within a 4.9 m (16 ft.) radius in an outdoor environment.
+                                    Their accuracy reduces near buildings, bridges, and trees. Sometimes these places provide a 2D
+                                    static map for navigation, but it is difficult to interpret. Augmented reality is a technology that
+                                    superimposes a computer-generated image on user view in the real-world. The basic idea is to
+                                    improve indoor navigation using Augmented Reality. The proposed application used to locate
+                                    a particular room in an indoor location. The application shows directions using a 3D model
+                                    and 2D map, and it also provides instructions to reach the particular room on the website. The
+                                    product provides a more accurate result than paper-based but less accurate than Wi-Fi-based.
+                                    It is a stable and more convenient way for indoor navigation.</p>
+                            </div>
+
+                            <button id="toggle-btn" class="toggle-button">Show More</button>
+                        </div>
+                        <!--<p>
+                            Whenever People visit places like hospitals, museums, and colleges, they find it difficult to navigate
+                            to a particular location. Using GPS for indoor navigation is impossible because GPS-enabled
+                            smartphones are typically accurate within a 4.9 m (16 ft.) radius in an outdoor environment.
+                            Their accuracy reduces near buildings, bridges, and trees. Sometimes these places provide a 2D
+                            static map for navigation, but it is difficult to interpret. Augmented reality is a technology that
+                            superimposes a computer-generated image on user view in the real-world. The basic idea is to
+                            improve indoor navigation using Augmented Reality. The proposed application used to locate
+                            a particular room in an indoor location. The application shows directions using a 3D model
+                            and 2D map, and it also provides instructions to reach the particular room on the website. The
+                            product provides a more accurate result than paper-based but less accurate than Wi-Fi-based.
+                            It is a stable and more convenient way for indoor navigation.</p>-->
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>Vuforia</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-container">
+                <!--<div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Subject</h3>
+                    <p>Description</p>
+                </div>-->
+                <div class="achievement-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certifications</h3>
+                    <p><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=35788667A388568C09B7F898CF9E21170BF2D438E82781BC50E39BA1639E1DB8" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                        Oracle Certified Associate: Java SE 8 Programmer (83.9%) by Oracle
+                        Corporation
+                        </a>
+                    </p>
+                    <p>AIFoundations: A Collaboration of ISTE and IBM by IBM SkillsBuild</p>
+                    <p>Java Training by Spoken Tutorial Project, IIT Bombay</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Hackathons</h3>
+                    <p>Participated in Kick-off Hackathon 2021</p>
+                    <p>Participated in Atharva Hackathon 2019</p>
+                    <p>Participated in Atharva Hackathon 2018</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Awards</h3>
+                    <p>Fresco Play Miles Award April 2022</p>
+                    <p>Best team Award June 2021</p>
+                    <p>Star team Award April 2021</p>
+                    <p>Applause team Award Jan 2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="academics" class="academic-section">
+        <h2 class="section-title">Academic Contributions</h2>
+
+        <div class="publications">
+            <h3><i class="fas fa-book-open"></i> Publications</h3>
+
+            <div class="publication-item">
+                <h4>Survey on Indoor Navigation Systems<a href="https://myresearchjournals.com/index.php/SAMRIDDHI/article/view/18574" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                    <i class="fas fa-external-link-alt"></i>
+                </a></h4>
+                <div class="publication-meta">
+                    <span class="journal">S-JPSET: Vol. 12, Issue Supplementary-1</span>
+                    <span class="issn">ISSN: 2229-7111 (Print) / 2454-5767 (Online)</span>
+                    <span class="status">Status: Published</span>
+                    <span class="ugc">UGC Listed Journal</span>
+                    <span class="year">2018-2019</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <h4>Indoor Navigation Using Augmented Reality<a href="https://smsjournals.com/index.php/SAMRIDDHI/article/view/2311" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                    <i class="fas fa-external-link-alt"></i>
+                </a></h4>
+                <div class="publication-meta">
+                    <span class="journal">S-JPSET: Vol. 12, Issue Supplementary-1</span>
+                    <span class="issn">ISSN: 2229-7111 (Print) / 2454-5767 (Online)</span>
+                    <span class="status">Status: Published</span>
+                    <span class="ugc">UGC Listed Journal</span>
+                    <span class="year">2018-2019</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="conferences">
+            <h3><i class="fas fa-users"></i> Workshops & Conferences</h3>
+
+            <div class="event-item">
+                <h4>International Conference on Innovative & Advanced Technologies in Engineering (ICIATE '19)</h4>
+                <div class="event-meta">
+                    <span class="topic">Topic: Augmented Reality</span>
+                    <span class="date">March 2019</span>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <h4>Workshop on WordPress</h4>
+                <div class="event-meta">
+                    <span class="date">2018</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <!--<section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <h3>Let's Connect</h3>
+            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
+            </br>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                   <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>umeshpatel00000@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9619995362</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mumbai, Maharashtra</span>
+                    </div>
+
+                </div>
+               <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- Contact Section class="contact-section"-->
+    <section id="contact" class="section">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeInDown">Let's <span>Connect</span> <span class="floating">👋</span></h2>
+
+            <div class="contact-container">
+                <!-- Contact Card -->
+                <div class="contact-card" id="contact-card">
+                    <h3><i class="fas fa-paper-plane"></i> Contact Me</h3>
+                    <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon-circle">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:umeshpatel00000@gmail.com" class="contact-link">umeshpatel00000@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-circle">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <a href="tel:+91 9619995362" class="contact-link">+91 9619995362</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-circle">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="contact-link">Mumbai, Maharashtra</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="social-section" id="social-section">
+                    <h3><i class="fas fa-share-alt"></i> Find Me Online</h3>
+                    <p>Connect with me on these platforms</p>
+
+                    <div class="social-links">
+                        <a href="https://github.com/umeshpatel00000" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                            <i class="fab fa-github"></i>
+                            <span class="tooltip">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/umeshpatel1998" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span class="tooltip">LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                            <i class="fab fa-twitter" class="inactive" ></i>
+                            <span class="tooltip">Twitter</span>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="redirect-icon" title="Open in new tab">
+                            <i class="fab fa-instagram" class="inactive" ></i>
+                            <span class="tooltip">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <!--<div class="social-links">
+                <a href="https://github.com/umeshpatel00000"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/umeshpatel1998"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="inactive"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="inactive"><i class="fab fa-instagram"></i></a>
+            </div>-->
+            <p>&copy; 2025 Umesh Patel. All Rights Reserved.</p>
+            <p>Designed and Developed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <!--Skill Section scripts-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <!--show more show less-->
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function() {
+            const moreText = document.getElementById('more-text');
+            const button = this;
+
+            moreText.classList.toggle('show-content');
+            button.classList.toggle('expanded');
+
+            if (moreText.classList.contains('show-content')) {
+                button.textContent = 'Show Less';
+            } else {
+                button.textContent = 'Show More';
+            }
+        });
+    </script>
+    <script>
+
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (document.getElementById('nav').classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('nav');
+
+        function toggleMenu() {
+            nav.classList.toggle('active');
+            menuToggle.innerHTML = nav.classList.contains('active') ?
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target) && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Prevent scrolling when menu is open
+        nav.addEventListener('touchmove', (e) => {
+            if (nav.classList.contains('active')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+
+    </script>
+    <!--Contact Me-->
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create floating particles
+            createParticles();
+
+            // Add scroll animations
+            setupScrollAnimations();
+
+            // Add hover effects
+            setupHoverEffects();
+        });
+
+        // Create floating particles background
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = window.innerWidth < 768 ? 15 : 25;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const opacity = Math.random() * 0.3 + 0.1;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+
+                // Apply styles
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = opacity;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+
+                // Random color (primary or accent)
+                particle.style.backgroundColor = Math.random() > 0.7 ?
+                    'rgba(231, 76, 60, 0.1)' : 'rgba(52, 152, 219, 0.1)';
+
+                container.appendChild(particle);
+            }
+        }
+
+        // Setup scroll animations
+        function setupScrollAnimations() {
+            const contactCard = document.getElementById('contact-card');
+            const socialSection = document.getElementById('social-section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-scroll');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(contactCard);
+            observer.observe(socialSection);
+        }
+
+        // Setup hover effects
+        function setupHoverEffects() {
+            // Add ripple effect to social icons
+            const socialIcons = document.querySelectorAll('.social-icon');
+
+            socialIcons.forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    const ripple = document.createElement('span');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.width = '100%';
+                    ripple.style.height = '100%';
+                    ripple.style.top = '0';
+                    ripple.style.left = '0';
+
+                    this.appendChild(ripple);
+
+                    // Remove ripple after animation
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        }
+    </script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6675f855ec414233ba71343ede000915"}'>
+
+    </script>
+    <!-- End Cloudflare Web Analytics -->
+</body>
+
+</html>
