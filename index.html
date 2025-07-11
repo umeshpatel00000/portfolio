@@ -64,7 +64,7 @@
                     <h1>Hi, I'm <span>Umesh Patel</span></h1>
                     <h2>Java Developer | Software Engineer</h2>
 
-                    <p> Java Microservice Developer with 4.5+ years of
+                    <p> Java Microservice Developer with <span id="experience"></span> of
                         hands-on experience in designing, developing, and
                         maintaining robust, scalable java applications.</p>
                     <div class="about-btns">
@@ -678,6 +678,32 @@
 
     <!--Skill Section scripts-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+    function getYearsAndMonthsFrom(dateString) {
+        const startDate = new Date(dateString);
+        const currentDate = new Date();
+
+        let years = currentDate.getFullYear() - startDate.getFullYear();
+        let months = currentDate.getMonth() - startDate.getMonth();
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        return { years, months };
+    }
+
+    // Set your fixed date here
+    const fixedDate = "2020-09-01";
+    const result = getYearsAndMonthsFrom(fixedDate);
+
+    // Display the result
+    document.getElementById("experience").style.backgroundColor = "transparent";
+    document.getElementById("experience").innerText =
+      `${result.years} years and ${result.months} months`;
+    </script>
     <script>
         AOS.init({
             duration: 800,
